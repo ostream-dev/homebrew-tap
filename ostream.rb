@@ -5,21 +5,21 @@
 class Ostream < Formula
   desc "Command-line client for ostream.dev — stream a pipe over HTTP"
   homepage "https://ostream.dev"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ostream-dev/ostream-cli/releases/download/v0.1.0/ostream_0.1.0_darwin_amd64.tar.gz"
-      sha256 "92f58a071c042afb16a90bdf928c1a3cf10471b77f7f1677932769537a879129"
+      url "https://github.com/ostream-dev/ostream-cli/releases/download/v0.2.0/ostream_0.2.0_darwin_amd64.tar.gz"
+      sha256 "8eccf7336abeb91d997064b61a57c583f7ec73ad81d7ded725c5c6c956b83d19"
 
       define_method(:install) do
         bin.install "ostream"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ostream-dev/ostream-cli/releases/download/v0.1.0/ostream_0.1.0_darwin_arm64.tar.gz"
-      sha256 "2366e5ae9cf1cae01bf696afb79ca860b52245073d5aca534bf379a5bc417c72"
+      url "https://github.com/ostream-dev/ostream-cli/releases/download/v0.2.0/ostream_0.2.0_darwin_arm64.tar.gz"
+      sha256 "92be8b398b0ca0f5c5e24a5b7065e73a4bb8171aa31480c102c6ae1d3ba32a53"
 
       define_method(:install) do
         bin.install "ostream"
@@ -29,15 +29,15 @@ class Ostream < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ostream-dev/ostream-cli/releases/download/v0.1.0/ostream_0.1.0_linux_amd64.tar.gz"
-      sha256 "5e7e77423fcd312a51640ec62a3022863d6fc09ff9909e55962e183c16732c20"
+      url "https://github.com/ostream-dev/ostream-cli/releases/download/v0.2.0/ostream_0.2.0_linux_amd64.tar.gz"
+      sha256 "da6e459c87f1fd70e3ed5f2d691886d3b5eab991fe006efe665f03190982186f"
       define_method(:install) do
         bin.install "ostream"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ostream-dev/ostream-cli/releases/download/v0.1.0/ostream_0.1.0_linux_arm64.tar.gz"
-      sha256 "9c684e57c5ab58bb9999d6c20f45799633b41ef6a8c193546f47c7b0dc0c387b"
+      url "https://github.com/ostream-dev/ostream-cli/releases/download/v0.2.0/ostream_0.2.0_linux_arm64.tar.gz"
+      sha256 "7b352870b239802b77c94aef4c2a08d6d8a9511ecbf2acd17bc8623915c6fa36"
       define_method(:install) do
         bin.install "ostream"
       end
